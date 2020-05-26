@@ -1,0 +1,377 @@
+/* STANDARD CSS */
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  min-height: 100vh;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* Try to keep your margins going in one direction to avoid margin collapase or grounding. I switch all the top margins off to avoid this issue. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  /* You MUST make sure that links stand out from nomal text though...*/
+}
+/* a:hover, a:focus {
+     text-decoration: underline;
+}
+ */
+img {
+  /* This means that it can be less than 100% of the width of its parent IF the image is INTRINSICALLY smaller */
+  max-width: 100%;
+  height: auto;
+  /* 'auto' is the initial value for height BUT for images (and other elements which have an intrinic height) that is not the case. To make an image responsive you set one dimension (usually width) to [max-]width: 100%;
+     and the other to 'auto' to ensure it keeps aspect ratio. 'auto' basically tells the browser to decide. */
+  vertical-align: middle;
+  /* minor vertical centering. Works for images IF there is a baseline (i.e. they are displayed inline or inline-block) */
+}
+/* Because we us <ul>s for lists that we don't always want bulletted. */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* To make actual bulletted lists */
+ul.typographic {
+  list-style: initial;
+  padding-inline-start: 20px;
+}
+/* For 'accessibility text'. If your button only has an image inside it that isn't good for accessibility. Put a span inside there and give it this class and put some descriptive text for what the button does into the span. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+/* GENERIC */
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+h2 {
+  color: #262626;
+  font-size: 21px;
+  padding: 21px 0;
+  margin-bottom: 0;
+}
+.grid {
+  padding: 0 15px;
+}
+/* MOBILE */
+/* Nav */
+.secondary-nav {
+  background-color: #000;
+}
+.secondary-nav-container {
+  padding: 5px 15px 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.secondary-nav button {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.secondary-nav button a:hover {
+  color: #f2667e;
+}
+.secondary-nav img {
+  height: 40px;
+  width: 40px;
+  border: none;
+}
+.secondary-nav i {
+  font-size: 22px;
+}
+.secondary-nav i:hover {
+  color: #f2667e;
+}
+.secondary-nav-icons a:nth-last-child(n + 3) {
+  display: none;
+}
+.secondary-nav-icons i {
+  margin-right: 13px;
+}
+.primary-nav {
+  display: none;
+}
+.promotion-nav {
+  display: none;
+}
+/* Main */
+.grid-item img {
+  border: 1px solid #d3d3d3;
+}
+.grid-item-info {
+  border: 1px solid #d3d3d3;
+  border-top: 1px transparent;
+  padding: 15px;
+  margin-bottom: 48px;
+}
+.grid-item-info h3 {
+  font-weight: 400;
+}
+.grid-item-info p {
+  font-weight: 200;
+}
+.grid-item div:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+.grid-item a:hover {
+  background-color: #000;
+  color: #fff;
+}
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 0 15px;
+}
+.main-footer a:hover {
+  text-decoration: underline;
+}
+.main-footer li {
+  margin-bottom: 10px;
+}
+.main-footer-social {
+  font-size: 14px;
+  padding: 10px 0 0 0;
+}
+.main-footer i {
+  font-size: 21px;
+}
+.main-footer-social ul {
+  display: flex;
+}
+.main-footer-social ul li {
+  margin-right: 10px;
+}
+.main-footer-column li {
+  margin-bottom: 10px;
+}
+.button-dropdown button {
+  background: none;
+  color: inherit;
+  border: 1px solid #fff;
+  padding: 10px 20px 0 20px;
+}
+.main-footer-row {
+  padding: 15px 0;
+}
+.main-footer-row div {
+  display: flex;
+  padding-bottom: 20px;
+}
+.main-footer-row a {
+  margin-right: 10px;
+}
+/* TABLET (min-width 840px) */
+@media screen and (min-width: 840px) {
+  /* Generic */
+  .grid {
+    padding: 0 30px;
+  }
+  /* Nav */
+  .primary-nav {
+    display: block;
+    background-color: #ededed;
+  }
+  .primary-nav img {
+    height: 53px;
+    width: 53px;
+    margin: 0 5px 0 33px;
+  }
+  .primary-nav-container {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  .primary-nav a {
+    font-size: 12px;
+    font-size: 1.5vw;
+  }
+  .primary-nav-container div:last-child {
+    display: flex;
+    padding-left: 10px;
+  }
+  .primary-nav-container a {
+    margin-right: 12px;
+  }
+  .primary-nav-container a:hover {
+    text-decoration: underline;
+  }
+  .primary-nav-search {
+    border-left: 1px solid #bfbfbf;
+    margin-left: auto;
+  }
+  .primary-nav-search i {
+    padding: 10px 5px 10px 0;
+  }
+  .primary-nav-search input {
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .promotion-nav {
+    display: block;
+    background-color: #ffd561;
+  }
+  .promotion-nav-container a:hover {
+    text-decoration: underline;
+  }
+  .promotion-nav-container ul {
+    display: flex;
+  }
+  .promotion-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+  }
+  .promotion-nav-container a:first-of-type {
+    text-transform: uppercase;
+    margin-right: 20px;
+  }
+  .secondary-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+  }
+  .secondary-nav-icons a:nth-last-child(n + 3) {
+    display: inline;
+    padding-right: 10px;
+  }
+  .secondary-nav i,
+  a {
+    font-size: 14px;
+  }
+  .secondary-nav-icons a:hover {
+    color: red;
+  }
+  .secondary-nav-container a:nth-of-type(-n + 1) {
+    display: none;
+  }
+  .secondary-nav-container a:nth-child(5) {
+    display: none;
+  }
+  .secondary-nav-container {
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  /* Main */
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .flex-row {
+    display: flex;
+    margin-right: 0;
+  }
+  .grid-container h2 {
+    width: 100%;
+    display: block;
+  }
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 279px;
+    margin-right: 17px;
+    align-content: center;
+    min-height: 50px;
+  }
+  .grid-item-info {
+    height: 215px;
+  }
+  .item-book {
+    height: 240px;
+  }
+  .grid-item:nth-child(4n) {
+    margin-right: 0;
+  }
+  .grid-item img {
+    min-width: 167px;
+    min-height: 167px;
+    max-width: 279px;
+    max-height: 279px;
+  }
+  /* Footer */
+  .main-footer a:hover {
+    text-decoration: underline;
+  }
+  .footer-container-column li {
+    margin-bottom: 10px;
+    text-align: end;
+  }
+  .main-footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .main-footer-social {
+    padding-top: 0;
+  }
+  .main-footer-social ul {
+    display: flex;
+  }
+  .main-footer-social a:hover {
+    text-decoration: underline;
+  }
+  .main-footer-social li {
+    margin-right: 10px;
+  }
+  .main-footer-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .footer-privacy a {
+    margin-right: 10px;
+  }
+}
