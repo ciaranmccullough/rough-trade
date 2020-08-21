@@ -285,13 +285,16 @@ footer {
     justify-content: flex-end;
     padding-right: 30px;
   }
-  .secondary-nav-icons a:nth-last-child(n + 3) {
+  .secondary-nav-icons a:nth-last-child(n + 2) {
     display: inline;
     padding-right: 10px;
   }
   .secondary-nav i,
   a {
     font-size: 14px;
+  }
+  .rough-trade-logo {
+    display: none;
   }
   .secondary-nav-icons a:hover {
     color: red;
