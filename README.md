@@ -1,6 +1,6 @@
 # RoughTrade Records (recreate)
 
-This document gives an overview of how this website is set up. Project is the recreate: 'https://www.roughtrade.com' using CSS flexbox.
+This document gives an overview of how this website is set up. Project is the recreate: 'https://www.roughtrade.com' using CSS flexbox. Clone the project, then open in your favoured text editor and from there open on your live server.
 
 ### Table of Contents
 
@@ -11,6 +11,8 @@ This document gives an overview of how this website is set up. Project is the re
 ## Design Notes
 
 Rebuilt website with HTML and CSS, responsive design beginning with mobile first, through tablet (min-width: 840px) and desktop.
+
+Used Webp next generation images which makes the first page load faster.
 
 The original font used on this site is Helvetica Neue. However, this font is not supported universally. Although it works on Mac and most browsers, users are encountering problems on Windows machines. I decided to opt for the more universally supported font: Roboto. More info here: 'https://github.com/twbs/bootstrap/issues/13823'
 
